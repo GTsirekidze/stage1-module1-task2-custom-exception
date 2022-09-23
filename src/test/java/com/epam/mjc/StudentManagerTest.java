@@ -30,6 +30,7 @@ public class StudentManagerTest {
     try {
       assertNotNull(manager.find(1000));
     } catch (IllegalArgumentException e) {
+      System.out.println(e.getMessage());
       assertEquals("Could not find student with ID 1000", e.getMessage());
     }
   }
